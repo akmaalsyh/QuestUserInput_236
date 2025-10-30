@@ -88,15 +88,16 @@ fun FormDataDiri(modifier: Modifier)
         )
         Button(
             modifier = Modifier.fillMaxWidth(
-                fraction = 1f),
-                //the button is enabled when the user makes a selection
-                enabled = textAlamat.isNotEmpty(),
-                onClick = {
-                    nama = textNama
-                    jenis = textJK
-                    alamat = textAlamat
-                }
-            )
+                fraction = 1f
+            ),
+            //the button is enabled when the user makes a selection
+            enabled = textAlamat.isNotEmpty(),
+            onClick = {
+                nama = textNama
+                jenis = textJK
+                alamat = textAlamat
+            }
+        )
         {
             Text(text = stringResource(R.string.submit))
         }
@@ -105,17 +106,22 @@ fun FormDataDiri(modifier: Modifier)
             modifier = Modifier.padding(
                 bottom = dimensionResource(R.dimen.padding_medium),
                 top = dimensionResource(id = R.dimen.padding_medium)
-                        ),
-                thickness = dimensionResource(R.dimen.divider_tipis),
-                color = Color.DarkGray
+            ),
+            thickness = dimensionResource(R.dimen.divider_tipis),
+            color = Color.DarkGray
         )
-        ElevatedCard (
+        ElevatedCard(
             elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
             colors = CardDefaults.cardColors(containerColor = Color.Black),
             modifier = Modifier
                 .height(100.dp)
                 .width(300.dp)
 
-        )
+        ) {
+            Column(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp),)
+            {
+
+            }
+        }
     }
 }
