@@ -96,17 +96,22 @@ fun FormDataDiri(modifier: Modifier)
                     jenis = textJK
                     alamat = textAlamat
                 }
-            ) {
-                Text(text = stringResource(R.string.submit))
-            }
+            )
+        {
+            Text(text = stringResource(R.string.submit))
+        }
 
-            HorizontalDivider(
-                modifier = Modifier.padding(
-                    bottom = dimensionResource(R.dimen.padding_medium),
-                    top = dimensionResource(id = R.dimen.padding_medium)
+        HorizontalDivider(
+            modifier = Modifier.padding(
+                bottom = dimensionResource(R.dimen.padding_medium),
+                top = dimensionResource(id = R.dimen.padding_medium)
                         ),
-                    thickness = dimensionResource(R.dimen.divider_tipis),
-                    color = Color.DarkGray
-                )
+                thickness = dimensionResource(R.dimen.divider_tipis),
+                color = Color.DarkGray
+        )
+        ElevatedCard (
+            elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.Black),
+        )
     }
 }
