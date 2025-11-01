@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
@@ -169,8 +170,18 @@ fun FormDataDiri(modifier: Modifier)
                             .fillMaxWidth()
                             .padding(vertical = dimensionResource(R.dimen.padding_small))
                     )
+                    Button(
+                        onClick = {
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp)
+                            .padding(top = dimensionResource(R.dimen.padding_small)),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3F51B5))
+                    ) {
+                        Text(text = stringResource(id = R.string.submit), color = Color.White)
+                    }
                 }
             }
-
         }
     }
