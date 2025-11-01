@@ -30,7 +30,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun FormDataDiri(modifier: Modifier)
@@ -65,8 +68,27 @@ fun FormDataDiri(modifier: Modifier)
                 colors = CardDefaults.cardColors(containerColor = Color(0xFFBA68C8)), // Ungu sedang
                 elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
             ) {
+                Text(
+                    text = "Formulir Pendaftaran",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = dimensionResource(R.dimen.padding_small))
+                    )
+                }
+            }
+            ElevatedCard(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = dimensionResource(R.dimen.padding_small)),
+            elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White)
+        ) {
 
-            }}
+            }
 
         Row {
             gender.forEach { item ->
