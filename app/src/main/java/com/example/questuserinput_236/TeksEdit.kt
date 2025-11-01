@@ -87,7 +87,13 @@ fun FormDataDiri(modifier: Modifier)
             elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(dimensionResource(R.dimen.padding_medium))
+                ) {
 
+                }
             }
 
         Row {
