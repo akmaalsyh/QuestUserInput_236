@@ -92,7 +92,20 @@ fun FormDataDiri(modifier: Modifier)
                         .fillMaxWidth()
                         .padding(dimensionResource(R.dimen.padding_medium))
                 ) {
-
+                    Text(
+                        text = "NAMA LENGKAP",
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 14.sp
+                    )
+                    OutlinedTextField(
+                        value = textNama,
+                        onValueChange = { textNama = it },
+                        label = { Text("Isian nama lengkap") },
+                        singleLine = true,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = dimensionResource(R.dimen.padding_small))
+                    )
                 }
             }
 
