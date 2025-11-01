@@ -130,6 +130,30 @@ fun FormDataDiri(modifier: Modifier)
                             Text(text = item)
                         }
                     }
+                    Text(
+                        text = "STATUS PERKAWINAN",
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 14.sp,
+                        modifier = Modifier.padding(top = dimensionResource(R.dimen.padding_small))
+                    )
+                    status.forEach { item ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .selectable(
+                                    selected = textStatus == item,
+                                    onClick = { textStatus = item }
+                                )
+                                .padding(start = 16.dp, top = 4.dp, bottom = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            RadioButton(
+                                selected = textStatus == item,
+                                onClick = { textStatus = item }
+                            )
+                            Text(text = item)
+                        }
+                    }
                 }
             }
 
