@@ -37,26 +37,24 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun FormDataDiri(modifier: Modifier)
-{
+fun FormDataDiri(modifier: Modifier) {
     // Variabel-variabel untuk mengingat nilai masukan dari
     var textNama by remember { mutableStateOf(value = "") }
     var textAlamat by remember { mutableStateOf(value = "") }
     var textJK by remember { mutableStateOf(value = "") }
     var textStatus by remember { mutableStateOf(value = "") }
 
-    val gender:List<String> = listOf("Laki-laki", "Perempuan")
-    val status:List<String> = listOf("Janda", "Lajang", "Duda")
+    val gender: List<String> = listOf("Laki-laki", "Perempuan")
+    val status: List<String> = listOf("Janda", "Lajang", "Duda")
 
-    Card(
+    ElevatedCard(
         modifier = Modifier
             .fillMaxSize()
-            .padding(
-                bottom = dimensionResource(R.dimen.padding_medium),
-                top = dimensionResource(R.dimen.padding_medium)),
-            colors = CardDefaults.cardColors(containerColor = Color(0xFFF3E5F5))
+            .padding(dimensionResource(R.dimen.padding_small)),
+        colors = CardDefaults.cardColors(containerColor = Color(0xFFF3E5F5)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
-        Column (
+        Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(dimensionResource(R.dimen.padding_medium)),
@@ -78,16 +76,16 @@ fun FormDataDiri(modifier: Modifier)
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(vertical = dimensionResource(R.dimen.padding_small))
-                    )
-                }
+                )
             }
+
             ElevatedCard(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = dimensionResource(R.dimen.padding_small)),
-            elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
-            colors = CardDefaults.cardColors(containerColor = Color.White)
-        ) {
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = dimensionResource(R.dimen.padding_small)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White)
+            ) {
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -182,6 +180,8 @@ fun FormDataDiri(modifier: Modifier)
                         Text(text = stringResource(id = R.string.submit), color = Color.White)
                     }
                 }
+
             }
         }
     }
+}
