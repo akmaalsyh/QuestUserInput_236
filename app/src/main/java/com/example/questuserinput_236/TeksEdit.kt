@@ -106,6 +106,30 @@ fun FormDataDiri(modifier: Modifier)
                             .fillMaxWidth()
                             .padding(vertical = dimensionResource(R.dimen.padding_small))
                     )
+                    Text(
+                        text = "JENIS KELAMIN",
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 14.sp,
+                        modifier = Modifier.padding(top = dimensionResource(R.dimen.padding_small))
+                    )
+                    gender.forEach { item ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .selectable(
+                                    selected = textJK == item,
+                                    onClick = { textJK = item }
+                                )
+                                .padding(start = 16.dp, top = 4.dp, bottom = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            RadioButton(
+                                selected = textJK == item,
+                                onClick = { textJK = item }
+                            )
+                            Text(text = item)
+                        }
+                    }
                 }
             }
 
