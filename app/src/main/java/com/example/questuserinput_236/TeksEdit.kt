@@ -51,10 +51,15 @@ fun FormDataDiri(modifier: Modifier)
                 bottom = dimensionResource(R.dimen.padding_medium),
                 top = dimensionResource(R.dimen.padding_medium)),
             colors = CardDefaults.cardColors(containerColor = Color(0xFFF3E5F5))
-    )
-    {
+    ) {
+        Column (
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(dimensionResource(R.dimen.padding_medium)),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
 
-            }
+        }
 
         Row {
             gender.forEach { item ->
