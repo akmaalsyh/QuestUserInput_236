@@ -58,8 +58,15 @@ fun FormDataDiri(modifier: Modifier)
                 .padding(dimensionResource(R.dimen.padding_medium)),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            ElevatedCard(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = dimensionResource(R.dimen.padding_small)),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFBA68C8)), // Ungu sedang
+                elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)
+            ) {
 
-        }
+            }}
 
         Row {
             gender.forEach { item ->
